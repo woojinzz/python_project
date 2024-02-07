@@ -30,7 +30,7 @@
 
 # string = "홀짝홀짝홀짝"
 # print(string[::2])
-#슬라이싱할 때 `시작인덱스:끝인덱스:오프셋`을 지정할 수 있습니다.
+#슬라이싱할 때 `시작인덱스:끝인덱스:오프셋`을 지정할 수 있습니다. 오프셋 = 2칸씩 건너띄워라
 
 #문자열 거꾸로
 # string = "python"
@@ -44,10 +44,12 @@
 # phone = "010-1234-1234"
 # phone1  = phone.replace("-", "")
 # print(phone1)
+# 문자열은 변경할 수 없음
 
 # url = "http://sharebook.kr"
 # url_split = url.split('.')# . 기준으로 2개로 나눠줌
 # print(url_split[-1]) # 뒤에 기준
+# print(url[-2:])
 
 # 대문자 변경
 # str = 'asdsdasa'
@@ -58,7 +60,7 @@
 # string.replace('b', 'B')
 # print(string)
 
-# 31 ~ 40
+# 31 ~ 40=============================================================
 
 # 31 문자열 합치기
 # a = "3"
@@ -164,7 +166,7 @@
 # print(data.rstrip())
 
 #========================================================
-# 리스트 
+# 리스트 / 순서가 있고 수정 가능
 # 51 ~ 60
 
 # 51 리스트 생성
@@ -198,4 +200,50 @@
 # print(movie) 
 # 리스트의 어떤 값을 삭제하면 남은 값들은 새로 인덱싱 됩니다.
 
+# 56 합치기
+# lang1 = ["C", "C++", "JAVA"]
+# lang2 = ["Python", "Go", "C#"]
+# langs = lang1 + lang2
+# print(langs)
 
+# 57 최대, 최소값
+# nums = [1,2,3,4,5]
+# print(max(nums), min(nums))
+
+# 58 합
+# nums = [1,2,3,4,5]
+# print(sum(nums))
+
+# 59 길이
+# cook = ["김치", "김밥", "만두", "라면", "피자"]
+# print(len(cook))
+
+# 60 평균
+# nums = [1,2,3,4,5]
+# age = sum(nums) / len(nums) 
+# print(age)
+
+# 61 리스트 출력
+# price = ["20202022", 100, -200, 300 ]
+# print(price[1:])
+
+# 62 홀수 출력
+# nums = [1,2,3,4,5,6 ]
+# print(nums[::2])
+
+# 63 짝수
+# nums = [1,2,3,4,5,6 ]
+# print(nums[1::2]) # 2개당 하나씩 2~6
+
+# 64 역방향
+# nums = [1,2,3,4,5,6 ]
+# print(nums[::-1]) # -1씩 가져옴 뒤에서부터 1을 주면 앞에서부터 하나씩
+
+# 65 
+# interest = ['삼전', 'LG전자', 'Naver']
+# print(interest[0], interest[2])
+
+# 66 join 메서드 / 리스트에 원소들을 하나의 문자열로 붙여줌
+interest = ['삼성', 'LG', 'Naver', 'SK', '미래에셋대우']
+result = " ".join(interest) # 중간에 공백을 두고 합쳐라 result는 문자열로 변경 
+print(result)
