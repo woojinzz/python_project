@@ -244,6 +244,141 @@
 # print(interest[0], interest[2])
 
 # 66 join 메서드 / 리스트에 원소들을 하나의 문자열로 붙여줌
-interest = ['삼성', 'LG', 'Naver', 'SK', '미래에셋대우']
-result = " ".join(interest) # 중간에 공백을 두고 합쳐라 result는 문자열로 변경 
-print(result)
+# interest = ['삼성', 'LG', 'Naver', 'SK', '미래에셋대우']
+# result = " ".join(interest) # 중간에 공백을 두고 합쳐라 result는 문자열로 변경 
+# print(result)
+
+# 67 join
+# interest = ['삼성', 'LG', 'Naver', 'SK', '미래에셋대우']
+# result = "/".join(interest)
+# print(result)
+
+# 68 join
+# interest = ['삼성', 'LG', 'Naver', 'SK', '미래에셋대우']
+# result = "\n".join(interest)
+# print(result)
+
+# 69 문자열 split 메서드 "/" 기준으로 나눔
+# string = "삼성전자/LG/네이버"
+# string = string.split("/")
+# print(string)
+
+# 70 오름차순
+# data = [2, 4, 3, 1, 5, 10, 9]
+# data.sort()
+# print(data)
+
+# 원본 리스트는 그대로 놔두고 새로 정렬 할려면
+# data = [2, 4, 3, 1, 5, 10, 9]
+# data2 = sorted(data)
+# print("원본 ", data)
+# print("오름차순 ", data2)
+
+# 튜플 =  비행기라고 생각 / 리스트는 기차
+
+# 71 빈 튜플 생성
+# my = ()
+# print(type(my))
+# print(len(my))
+
+# 72 
+#movie_rank = ("닥터", "스플릿", "럭키")
+
+# 73
+# num = (1)
+# print(type(num))
+# 이렇게 하면 튜플이 아니라 int 로 인식
+
+# num = (1, )
+# print(type(num))
+# 이렇게 한 개의 값을 넣을 때는 ,를 붙여줘야 함
+
+# 74 코드 오류 원인
+
+# >> t = (1, 2, 3)
+# >> t[0] = 'a'
+# Traceback (most recent call last):
+#   File "<pyshell#46>", line 1, in <module>
+#     t[0] = 'a'
+# TypeError: 'tuple' object does not support item assignment
+
+# 튜플은 원소 변경이 안됨
+
+# 75 튜플 () 없이도 정의 가능
+# t = 1,2,3,4,5
+# print(type(t))
+
+# 76 
+# t = ('a', 'b', 'c')
+# t = ('A', 'B', 'C')
+# print(t)
+# 튜플은 변경이 안돼서 t 변수를 새로 정의 해야함
+
+# 77
+# interest = ('삼성전자', 'LG전자', 'SK Hynix')
+# data = list(interest)
+# print(data)
+# 타입 변경은 가능
+
+# 78
+# temp = ('apple', 'banana', 'cake')
+# a, b, c = temp
+# print(a, b, c)
+
+# 80
+# num = tuple(range(2, 100, 2))
+# print(num)
+
+# 딕셔너리
+# 변수의 갯수와 데이터의 갯수가 똑같을 때 사용하는게 언페킹
+# 81 별 표현식 *나머지를 바인딩 여러개 담을 수 있는 자료구조로
+# a, b, *c = (1,2,3,4,5,6,7)
+# print(a)
+# print(b)
+# print(c)
+
+# *a, b, c = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# print(a)
+# print(b)
+# print(c)
+
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# *valid_score, a, b= scores
+# print(valid_score)
+
+# 최고점,최저점 제외
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9지.9, 9.5, 7.8, 9.4]
+# scores.sort()
+# _, *score, _= scores
+# print(score)
+# print(sum(score)/len(score))
+# "_" 언더스코어는 파이썬 문법에 의해 변수를 넣어야 하만 다음줄에서 사용하지않는 변수이면 _ 표현한다 
+
+# 82
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# _, _, *a = scores
+# print(a)
+
+# 83
+# scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+# _, *a, _ = scores
+# print(a)
+
+# 딕셔너리 {키: 벨류} 
+# 84 비어있는 딕셔너리
+# temp = {}
+# print(type(temp))
+
+# 85 
+# ice = {"메로나" : 1000, "폴라포" : 1200, "빵빠레" : 1800 }
+# print(ice)
+
+# 86 추가
+# ice = {"메로나" : 1000, "폴라포" : 1200, "빵빠레" : 1800 }
+# ice["조스바"] = 1200
+# ice["월드콘"] = 1200
+# print(ice)
+
+# 87 
+# ice = {"메로나" : 1000, "폴라포" : 1200, "빵빠레" : 1800 }
+# print("메로나 가격 : ", ice["메로나"])
